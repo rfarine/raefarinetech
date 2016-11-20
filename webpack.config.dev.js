@@ -24,22 +24,15 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx?$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }, {
-      test: /\.css$/,
-      loader: combineLoaders([
-        {
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader',
-          query: {
-            modules: true,
-            localIdentName: '[name]__[local]___[hash:base64:5]'
-          }
-        }
-      ])
+      test: /\.s?css$/,
+      loader: 'style!css?modules&sourceMap&localIdentName=[local]___[hash:base64:5]!resolve-url!sass?outputStyle=expanded&sourceMap'
     }]
-  }
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
 };
