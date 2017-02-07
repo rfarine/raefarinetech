@@ -2,7 +2,6 @@
 
 # Rae Farine
 ## Portfolio
----
 
 Visit [raefarine.tech](http://raefarine.tech) to see it in action.
 
