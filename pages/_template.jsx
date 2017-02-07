@@ -31,13 +31,7 @@ module.exports = React.createClass({
               padding: `${rhythm(1)} ${rhythm(3/4)}`,
             }}
           >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
+            <Link to={prefixLink('/')}>
               Gatsby!!!
             </Link>
           </Container>
