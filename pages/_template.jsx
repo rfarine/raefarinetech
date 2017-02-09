@@ -1,10 +1,8 @@
 import React from 'react';
 import { Container } from 'react-responsive-grid';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 import Headroom from 'react-headroom';
-
-import { rhythm } from '../utils/typography'
+import Navigation from 'components/navigation/navigation';
+import { rhythm } from 'utils/typography';
 
 module.exports = React.createClass({
   propTypes () {
@@ -12,15 +10,15 @@ module.exports = React.createClass({
       children: React.PropTypes.any,
     }
   },
+
   render () {
+    const { children } = this.props;
+
     return (
       <div>
         <Headroom
           wrapperStyle={{
             marginBottom: rhythm(1),
-          }}
-          style={{
-            background: 'lightgray',
           }}
         >
           <Container
@@ -30,9 +28,7 @@ module.exports = React.createClass({
               padding: `${rhythm(1)} ${rhythm(3/4)}`,
             }}
           >
-            <Link to={prefixLink('/')}>
-              Gatsby!!!
-            </Link>
+            <Navigation />
           </Container>
         </Headroom>
         <Container
@@ -42,7 +38,7 @@ module.exports = React.createClass({
             paddingTop: 0,
           }}
         >
-          {this.props.children}
+          {children}
         </Container>
       </div>
     )

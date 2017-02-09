@@ -1,4 +1,4 @@
-import { stylesPath } from 'config/paths';
+import { componentsPath, stylesPath, utilsPath } from 'config/paths';
 
 exports.modifyWebpackConfig = function(config, stage) {
   config.removeLoader('css');
@@ -10,7 +10,7 @@ exports.modifyWebpackConfig = function(config, stage) {
   });
 
   config.merge({
-    resolve: [ stylesPath ]
+    resolve: [ componentsPath, stylesPath, utilsPath ]
   });
 
   return config;

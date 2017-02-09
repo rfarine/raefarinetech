@@ -1,19 +1,21 @@
-import ReactDOM from 'react-dom/server'
-import React from 'react'
-import Typography from 'typography'
-import { GoogleFont } from 'react-typography'
-import CodePlugin from 'typography-plugin-code'
+import ReactDOM from 'react-dom/server';
+import React from 'react';
+import Typography from 'typography';
+import { GoogleFont } from 'react-typography';
+import CodePlugin from 'typography-plugin-code';
 
 const options = {
   googleFonts: [
     {
-      name: 'Montserrat',
+      name: 'Libre Franklin',
       styles: [
+        '400',
         '700',
+        '700i'
       ],
     },
     {
-      name: 'Arvo',
+      name: 'Libre Baskerville',
       styles: [
         '400',
         '400i',
@@ -21,8 +23,8 @@ const options = {
       ],
     },
   ],
-  headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Arvo', 'sans-serif'],
+  headerFontFamily: ['Libre Franklin', 'sans-serif'],
+  bodyFontFamily: ['Libre Baskerville', 'serif'],
   baseFontSize: '18px',
   baseLineHeight: 1.65,
   scaleRatio: 2.25,
@@ -31,18 +33,20 @@ const options = {
   ],
 }
 
-const typography = new Typography(options)
+const typography = new Typography(options);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles()
+  typography.injectStyles();
+
   if (typeof document !== 'undefined') {
     const googleFonts = ReactDOM.renderToStaticMarkup(
       React.createFactory(GoogleFont)({ typography })
     )
-    const head = document.getElementsByTagName('head')[0]
-    head.insertAdjacentHTML('beforeend', googleFonts)
+    const head = document.getElementsByTagName('head')[0];
+
+    head.insertAdjacentHTML('beforeend', googleFonts);
   }
 }
 
-export default typography
+export default typography;
