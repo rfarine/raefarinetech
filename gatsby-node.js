@@ -1,4 +1,4 @@
-import { componentsPath, stylesPath, utilsPath } from 'config/paths';
+const { componentsPath, stylesPath, utilsPath } = require('config/paths');
 
 exports.modifyWebpackConfig = function(config, stage) {
   config.removeLoader('css');
