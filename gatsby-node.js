@@ -9,6 +9,32 @@ exports.modifyWebpackConfig = function(config, stage) {
     return cfg;
   });
 
+  config.loader('images', function(cfg) {
+    cfg.test = /\.(gif|png|jpe?g|svg)$/i;
+    cfg.loaders = [
+      'file-loader?context=images&name=images/[path][name].[ext]',
+      {
+        loader: 'image-webpack-loader',
+        query: {
+          mozjpeg: {
+            progressive: true,
+          },
+          gifsicle: {
+            interlaced: false,
+          },
+          optipng: {
+            optimizationLevel: 4,
+          },
+          pngquant: {
+            quality: '75-90',
+            speed: 4
+          }
+        }
+      }
+    ];
+    return cfg;
+  });
+
   config.merge({
     resolve: [ componentsPath, stylesPath, utilsPath ]
   });

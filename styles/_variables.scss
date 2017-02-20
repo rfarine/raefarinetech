@@ -1,12 +1,9 @@
-$red: #CD544B;
-$green: #536653;
-$yellow: #BBA24E;
-$tan: #DAC99D;
-$black: #29211F;
+$white: #FFFFFF;
+$black: #000000;
 
 $text-color: $black;
-$body-background-color: fade-out($tan, 0.75);
+$body-background-color: $white;
 
-$title-color: $green;
+$title-color: $black;
 $h1-color: $title-color;
 $header-color: $black;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from 'react-responsive-grid';
 import Headroom from 'react-headroom';
-import Navigation from 'components/navigation/navigation';
 import { rhythm } from 'utils/typography';
+import Navigation from 'components/navigation/navigation';
+import Hero from 'components/hero/hero';
 
 module.exports = React.createClass({
   propTypes () {
@@ -19,6 +20,8 @@ module.exports = React.createClass({
         <Headroom
           wrapperStyle={{
             marginBottom: rhythm(1),
+            position: 'absolute',
+            width: '100%',
           }}
         >
           <Container
@@ -31,6 +34,13 @@ module.exports = React.createClass({
             <Navigation />
           </Container>
         </Headroom>
+        <Container
+          style={{
+            maxWidth: '100%',
+          }}
+        >
+          <Hero />
+        </Container>
         <Container
           style={{
             maxWidth: 960,
