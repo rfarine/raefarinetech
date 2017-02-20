@@ -25,7 +25,7 @@ const options = {
   ],
   headerFontFamily: ['Libre Franklin', 'sans-serif'],
   bodyFontFamily: ['Libre Baskerville', 'serif'],
-  baseFontSize: '18px',
+  baseFontSize: '20px',
   baseLineHeight: 1.65,
   scaleRatio: 2.25,
   plugins: [

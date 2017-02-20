@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.component {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.link {
+  font-family: 'Libre Franklin', sans-serif;
+  position: relative;
+  color: $lightViolet;
+  margin: 0 1em;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: fade-out($lightViolet, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(10px);
+  }
+
+  &:hover, &:focus {
+    color: $lightBlue;
+    &::after {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}

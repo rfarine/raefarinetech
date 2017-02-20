@@ -24,15 +24,7 @@ module.exports = React.createClass({
             width: '100%',
           }}
         >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Navigation />
-          </Container>
+          <Navigation />
         </Headroom>
         <Container
           style={{

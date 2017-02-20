@@ -14,15 +14,11 @@
     color: $header-color;
   }
 
-  h2 {
-    font-style: italic;
-  }
-
   p {
     color: $text-color;
   }
 
-  .navigation {
-    background: $black;
+  a, a:link {
+    text-decoration: none;
   }
 }
