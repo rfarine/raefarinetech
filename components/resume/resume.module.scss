@@ -1,0 +1,49 @@
+@import 'styles/variables';
+
+.experience {
+  li {
+    margin-bottom: 2.5em;
+  }
+}
+
+.link,
+.location,
+.date {
+  font-size: 1em;
+}
+
+.date,
+.location {
+  color: fade-out($black, 0.25);
+}
+
+.link {
+  text-transform: uppercase;
+}
+
+.date {
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.seperator {
+  font-family: $sans-serif;
+  font-size: 1.25em;
+  font-weight: 100;
+  color: $tan;
+  padding: 0 1em;
+}
+
+.desc {
+  display: inline-block;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.skills {
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

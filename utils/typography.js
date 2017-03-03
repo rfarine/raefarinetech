@@ -9,6 +9,7 @@ const options = {
     {
       name: 'Libre Franklin',
       styles: [
+        '100',
         '400',
         '700',
         '700i'

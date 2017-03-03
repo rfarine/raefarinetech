@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import About from 'components/about/about';
+import Resume from 'components/resume/resume';
 import './index.module.scss';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         ]}
       />
       <About />
+      <Resume />
     </div>
   );
 };

@@ -18,8 +18,8 @@ const Navigation = () => {
         <Link to={prefixLink('#about')} className={style.link}>
           About
         </Link>
-        <Link to={prefixLink('#portfolio')} className={style.link}>
-          Portfolio
+        <Link to={prefixLink('#resume')} className={style.link}>
+          Resume
         </Link>
         <Link to={prefixLink('#contact')} className={style.link}>
           Contact
