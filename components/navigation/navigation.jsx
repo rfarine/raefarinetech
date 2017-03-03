@@ -27,6 +27,6 @@ const Navigation = () => {
       </div>
     </Container>
   );
-}
+};
 
 export default Navigation;
