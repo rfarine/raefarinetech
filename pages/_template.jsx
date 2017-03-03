@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'react-responsive-grid';
 import { rhythm } from 'utils/typography';
-import Navigation from 'components/navigation/navigation';
 
 module.exports = React.createClass({
   propTypes () {
@@ -17,15 +16,8 @@ module.exports = React.createClass({
       <div>
         <Container
           style={{
-            maxWidth: '100%',
-          }}
-        >
-          <Navigation />
-        </Container>
-        <Container
-          style={{
             maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(2)}`,
+            padding: `${rhythm(3)} ${rhythm(2)}`,
             paddingTop: 0,
           }}
         >
